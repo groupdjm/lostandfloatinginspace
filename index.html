@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lost And Floating In Space</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Exo+2" rel="stylesheet">
+
+</head>
+
+<style type="text/css">
+
+ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}  
+</style> <!-- Reset Css-->
+
+
+<style type="text/css">
+    body{background-color: #3A363A; color: #E3E6EA; font-family: 'Exo 2', sans-serif;}
+    .wrap{width: calc(100vw - 50%); height: 100vh; margin: auto;} 
+    h1{margin-top: 100px; text-align: center; display: block; font-family: 'Arvo', serif; font-size: 22px;}
+    .hidden{display: none;}
+    .postWrap{display: block; margin-top: 24px; border-top: 2.1px solid #2A4F5E; padding: 15px; background-color: #4B484B; box-sizing: border-box; line-height: 20px;}
+    .postWrap h2{margin-bottom: 15px; font-size: 18px; font-weight: 500;}
+    .postWrap p {border-left: 1px solid #B0BFD3; padding-left: 5px; box-sizing: border-box; margin-bottom: 10px; font-size: 15px; font-weight: 400;}
+    
+
+    /*https://coolors.co/780116-084c61-010400-255957-e5a632*/
+    /*https://coolors.co/app/e3e6ea-b0bfd3-6393ae-2a4f5e-3a363a*/
+
+</style>
+
+<body>
+    <div id='container'></div>
+
+
+    <main class="wrap">
+        <h1>...lost and floating in space...</h1>
+
+        <article class="postWrap" id="postId" type="">
+            <img src="" class="hidden">
+            <h2>lofi hiphop...</h2>
+            <p>Why has it taken me this long to find this incredible style of music. It's relaxing yet intricate. Going no where and somewhere all at the same time. I have embeded a playlist below.</p>
+
+            <iframe src="https://open.spotify.com/embed/user/delicieusemusique/playlist/4l1gy3h0r9BV5lMLGNT294" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+        </article>
+
+        <article class="postWrap" id="postId" type="">
+            <img src="" class="hidden">
+            <h2>hello world...</h2>
+            <p>This will be the place for me to track ideas and achivments. A place I can write my thoughts, display my work, while I travel through life.</p>
+            <p>I am the type of person who gets lost sometimes. I always know where I need to go. But the directions to get there are unclear. I try to always follow the idea I have in my head. But, somtimes its my head that gets in the way. Im hoping with this next year coming in to swing ill be able to really take life by the kahonas and finally get to a place where I am content. I am going to do this buy finally doing what ive known I needed to do for a while. Quit the distractions and focus on the fullfilling tasks that may be hard at first but I know will end up worth it in the end. I cant let my own head take advantage of the situations I create and let me get distracted.</p>
+            <p>On the other hand, I need to be able to let myself have enjoyment. I normally just go hard and no fun or fun and no hard. I gotta find that balence. At the end of the day I know ill make my life into somthing that I am proud of. I just need to get there. Enjoy it on the way. </p>
+        </article>
+    </main>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+    var starblink=250;            // LENGTH OF TIME STARS TWINKLE ON IN MILLISECONDS
+    var stardelay=2;               // DELAY BETWEEN TWINKLES IN SECONDS
+
+    //  ENTER THE COLORS OF THE STARS IN THE ARRAY BELOW SEPERATED BY COMMAS.
+    //  YOU CAN USE VALID COLOR NAMES OR HEX COLOR TRIPLETS.
+    var starcolors=new Array( '#ffffff' , '#f1f1f1f' , '#ffffff' , '#f2f2f2f' );
+
+    // **** DO NOT EDIT BELOW HERE **** //
+
+    var w3c=(document.getElementById)?true:false;
+    var ns4=(document.layers)?true:false;
+    var ie4=(document.all && !w3c)?true:false;
+    var ie5=(document.all && w3c)?true:false;
+    var ns6=(w3c && navigator.appName.indexOf("Netscape")>=0)?true:false;
+
+    var windowW, windowH,star;
+
+    function getwindowdims(){
+    windowW=(ie4||ie5)? document.body.clientWidth: window.innerWidth;
+    windowH=(ie4||ie5)?  document.body.clientHeight :window.innerHeight;
+    }
+
+    function twinkle(phs,c){
+    var x,y;
+    if(phs==2){
+    x=Math.floor(Math.random()*windowW-2);
+    y=Math.floor(Math.random()*windowH-2);
+    if(ns4){
+    star.visibility="hide"
+    star.moveTo(x,y);
+    star.bgColor=starcolors[c];
+    }else{
+    star.style.visibility="visible";
+    star.style.left=x+'px';
+    star.style.top=y+'px';
+    star.style.backgroundColor=starcolors[c];
+    }
+    setTimeout('twinkle(1,'+(Math.floor(Math.random()*starcolors.length))+')', stardelay);
+    }else{
+    (ns4)?star.visibility="show" : star.style.visibility="visible";
+    setTimeout('twinkle(2,'+c+')',starblink);
+    }}
+
+    document.write( (ns4)? '<layer name="star" left="0" top="0" width="4" height="4" bgcolor="white" visibility="hide"></layer>' : '<div id="star" style="position:absolute; width:5px; height:5px; top:0px; left:0px; font-size:2px; background-color:white; visibility:hidden"></div>');
+
+    window.onload=function(){
+    star=(ns4)?document.layers['star']:(ie4)? document.all['star']:document.getElementById('star');
+    getwindowdims();
+    window.onresize=getwindowdims;
+    twinkle(2,0);
+    }
+
+</script>
+
+</html>
